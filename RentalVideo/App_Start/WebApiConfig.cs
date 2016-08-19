@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Web.Http;
 using Microsoft.Owin.Security.OAuth;
 using Newtonsoft.Json.Serialization;
+using RentalVideo.Infrastructure;
 
 namespace RentalVideo
 {
@@ -19,6 +20,8 @@ namespace RentalVideo
 
             // Use camel case for JSON data.
             config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+
+            config.MessageHandlers.Add(new RentalVideoAuthHandler());
 
             // Web API routes
             config.MapHttpAttributeRoutes();
