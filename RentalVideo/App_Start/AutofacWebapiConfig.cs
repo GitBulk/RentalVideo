@@ -23,7 +23,7 @@ namespace RentalVideo.App_Start
             Initialize(config, RegisterServices(new ContainerBuilder()));
         }
 
-        private static void Initialize(HttpConfiguration config, IContainer container)
+        public static void Initialize(HttpConfiguration config, IContainer container)
         {
             config.DependencyResolver = new AutofacWebApiDependencyResolver(container);
         }

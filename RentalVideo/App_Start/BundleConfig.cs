@@ -31,6 +31,16 @@ namespace RentalVideo
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                 "~/Scripts/modernizr-*"));
 
+            bundles.Add(new ScriptBundle("~/bundles/spa").Include(
+                "~/Scripts/spa/modules/common.core.js",
+                "~/Scripts/spa/modules/common.ui.js",
+                "~/Scripts/spa/app.js",
+                "~/Scripts/spa/services/apiServices.js",
+                "~/Scripts/spa/services/notification.js",
+                "~/Scripts/spa/layout/topBar.directive.js",
+                "~/Scripts/spa/layout/sideBar.directive.js",
+                "~/Scripts/spa/home/rootController.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/vendors").Include(
                 "~/Scripts/jquery-{version}.js",
                 "~/Scripts/bootstrap.js",

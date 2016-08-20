@@ -260,14 +260,20 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\GenresController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MeController.cs" />
+    <Compile Include="Controllers\MoviesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\Core\ApiBaseController.cs" />
     <Compile Include="Infrastructure\Extensions\RequestMessageExtensions.cs" />
+    <Compile Include="Infrastructure\Mappings\AutoMapperConfiguration.cs" />
+    <Compile Include="Infrastructure\Mappings\DomainToViewModelMappingProfile.cs" />
     <Compile Include="Infrastructure\RentalVideoAuthHandler.cs" />
+    <Compile Include="Infrastructure\Validators\MovieViewModelValidator.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -276,6 +282,8 @@
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\GenreViewModel.cs" />
+    <Compile Include="ViewModels\MovieViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
@@ -1166,6 +1174,18 @@
     <Content Include="Scripts\raphael-min.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\spa\app.js" />
+    <Content Include="Scripts\spa\home\index.html" />
+    <Content Include="Scripts\spa\home\indexController.js" />
+    <Content Include="Scripts\spa\home\rootController.js" />
+    <Content Include="Scripts\spa\layout\sideBar.directive.js" />
+    <Content Include="Scripts\spa\layout\sideBar.html" />
+    <Content Include="Scripts\spa\layout\topBar.directive.js" />
+    <Content Include="Scripts\spa\layout\topBar.html" />
+    <Content Include="Scripts\spa\modules\common.ui.js" />
+    <Content Include="Scripts\spa\rental\rental.html" />
+    <Content Include="Scripts\spa\services\apiServices.js" />
+    <Content Include="Scripts\spa\services\notificationService.js" />
     <Content Include="Scripts\toastr.js" />
     <Content Include="Scripts\toastr.min.js" />
     <Content Include="Scripts\underscore-min.js" />
@@ -1208,11 +1228,13 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Scripts\version.json" />
+    <Content Include="Scripts\spa\modules\common.core.js" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\raty-2.7.0\fonts\" />
     <Folder Include="Content\raty-2.7.0\images\" />
+    <Folder Include="Scripts\spa\customers\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RentalVideo.Infrastructure.Mappings;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,6 +12,7 @@ namespace RentalVideo.App_Start
         public static void Run()
         {
             AutofacWebapiConfig.Initialize(GlobalConfiguration.Configuration);
+            AutoMapperConfiguration.Initialize();
         }
     }
 }
