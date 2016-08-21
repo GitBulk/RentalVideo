@@ -13,7 +13,7 @@ using System.Web.Http;
 namespace RentalVideo.Controllers
 {
     [Authorize(Roles = "Admin")]
-    [Route("api/movies")]
+    [RoutePrefix("api/movies")]
     public class MoviesController : ApiBaseController
     {
         private readonly IEntityBaseRepository<Movie> movieRepo;
@@ -25,7 +25,7 @@ namespace RentalVideo.Controllers
         }
 
         [AllowAnonymous]
-        [Route("lastest")]
+        [Route("latest")]
         public HttpResponseMessage Get(HttpRequestMessage request)
         {
             return base.CreateHttpResponse(request, () =>

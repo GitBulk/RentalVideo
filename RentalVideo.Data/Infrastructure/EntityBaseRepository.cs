@@ -28,6 +28,11 @@ namespace RentalVideo.Data.Infrastructure
             }
         }
 
+        public EntityBaseRepository()
+        {
+
+        }
+
         public EntityBaseRepository(IDbFactory factory)
         {
             this.DbFactory = factory;

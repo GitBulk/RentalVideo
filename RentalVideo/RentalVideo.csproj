@@ -227,6 +227,7 @@
     <Compile Include="App_Start\Bootstrapper.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IMyAggregateService.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
@@ -273,7 +274,9 @@
     <Compile Include="Infrastructure\Mappings\AutoMapperConfiguration.cs" />
     <Compile Include="Infrastructure\Mappings\DomainToViewModelMappingProfile.cs" />
     <Compile Include="Infrastructure\RentalVideoAuthHandler.cs" />
+    <Compile Include="Infrastructure\Validators\LoginViewModelValidator.cs" />
     <Compile Include="Infrastructure\Validators\MovieViewModelValidator.cs" />
+    <Compile Include="Infrastructure\Validators\RegistrationViewModelValidator.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -283,7 +286,10 @@
     <Compile Include="Results\ChallengeResult.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\GenreViewModel.cs" />
+    <Compile Include="ViewModels\IViewModel.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\MovieViewModel.cs" />
+    <Compile Include="ViewModels\RegistrationViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
@@ -308,6 +314,12 @@
     <Content Include="Content\loading-bar.css" />
     <Content Include="Content\loading-bar.min.css" />
     <Content Include="Content\morris.css" />
+    <Content Include="Content\raty-2.7.0\fonts\raty.svg" />
+    <Content Include="Content\raty-2.7.0\images\cancel-off.png" />
+    <Content Include="Content\raty-2.7.0\images\cancel-on.png" />
+    <Content Include="Content\raty-2.7.0\images\star-half.png" />
+    <Content Include="Content\raty-2.7.0\images\star-off.png" />
+    <Content Include="Content\raty-2.7.0\images\star-on.png" />
     <Content Include="Content\raty-2.7.0\jquery.raty.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\toastr.css" />
@@ -412,6 +424,9 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\raty-2.7.0\fonts\raty.eot" />
+    <Content Include="Content\raty-2.7.0\fonts\raty.ttf" />
+    <Content Include="Content\raty-2.7.0\fonts\raty.woff" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-dj.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-er.js" />
@@ -1174,7 +1189,13 @@
     <Content Include="Scripts\raphael-min.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\spa\account\login.html" />
+    <Content Include="Scripts\spa\account\loginController.js" />
+    <Content Include="Scripts\spa\account\registerController.js" />
     <Content Include="Scripts\spa\app.js" />
+    <Content Include="Scripts\spa\directives\availableMovie.directive.js" />
+    <Content Include="Scripts\spa\directives\availableMovie.html" />
+    <Content Include="Scripts\spa\directives\componentRating.directive.js" />
     <Content Include="Scripts\spa\home\index.html" />
     <Content Include="Scripts\spa\home\indexController.js" />
     <Content Include="Scripts\spa\home\rootController.js" />
@@ -1185,6 +1206,7 @@
     <Content Include="Scripts\spa\modules\common.ui.js" />
     <Content Include="Scripts\spa\rental\rental.html" />
     <Content Include="Scripts\spa\services\apiServices.js" />
+    <Content Include="Scripts\spa\services\membershipServices.js" />
     <Content Include="Scripts\spa\services\notificationService.js" />
     <Content Include="Scripts\toastr.js" />
     <Content Include="Scripts\toastr.min.js" />
@@ -1232,8 +1254,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\raty-2.7.0\fonts\" />
-    <Folder Include="Content\raty-2.7.0\images\" />
     <Folder Include="Scripts\spa\customers\" />
   </ItemGroup>
   <ItemGroup>

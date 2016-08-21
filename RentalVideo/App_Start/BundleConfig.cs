@@ -36,10 +36,16 @@ namespace RentalVideo
                 "~/Scripts/spa/modules/common.ui.js",
                 "~/Scripts/spa/app.js",
                 "~/Scripts/spa/services/apiServices.js",
-                "~/Scripts/spa/services/notification.js",
+                "~/Scripts/spa/services/notificationService.js",
+                "~/Scripts/spa/services/membershipService.js",
                 "~/Scripts/spa/layout/topBar.directive.js",
                 "~/Scripts/spa/layout/sideBar.directive.js",
-                "~/Scripts/spa/home/rootController.js"));
+                "~/Scripts/spa/home/rootController.js",
+                "~/Scripts/spa/home/indexController.js",
+                "~/Scripts/spa/account/loginController.js",
+                "~/Scripts/spa/account/registerController.js",
+                "~/Scripts/spa/directives/availableMovie.directive.js",
+                "~/Scripts/spa/directives/componentRating.directive.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/vendors").Include(
                 "~/Scripts/jquery-{version}.js",
@@ -57,7 +63,7 @@ namespace RentalVideo
                 "~/Scripts/angular-file-upload.js",
                 "~/Scripts/angucomplete-alt.js",
                 "~/Scripts/underscore.js",
-                "~/Scripts/raphael.js",
+                "~/Scripts/raphael-min.js",
                 "~/Scripts/morris.js",
                 "~/Scripts/jquery.fancybox.js",
                 "~/Scripts/jquery.fancybox.media.js",

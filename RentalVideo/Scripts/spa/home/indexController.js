@@ -6,6 +6,8 @@
         $scope.pageClass = 'page-home';
         $scope.loadingMovies = true;
         $scope.loadingGenres = true;
+
+        // For the home/index.html we want the rating to be read-only
         $scope.isReadOnly = true;
         $scope.latestMovies = [];
         $scope.loadData = loadData;

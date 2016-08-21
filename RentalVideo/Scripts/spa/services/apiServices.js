@@ -11,11 +11,11 @@
                         .then(function (result) {
                             success(result);
                         }, function (error) {
-                            if (error.status == '401') {
+                            if (error.status === '401') {
                                 notificationService.displayError('Authentication required.');
                                 $rootScope.previousState = $location.path();
                                 $location.path('/login');
-                            } else if (failure != null) {
+                            } else if (failure !== null) {
                                 failure(error);
                             }
                         });
@@ -27,11 +27,11 @@
                         .then(function (result) {
                             success(result);
                         }, function (error) {
-                            if (error.status == '401') {
+                            if (error.status === '401') {
                                 notificationService.displayError('Authentication required.');
                                 $rootScope.previousState = $location.path();
                                 $location.path('/login');
-                            } else if (failure != null) {
+                            } else if (failure !== null) {
                                 failure(error);
                             }
                         });

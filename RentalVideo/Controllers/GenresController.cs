@@ -17,6 +17,7 @@ namespace RentalVideo.Controllers
     public class GenresController : ApiBaseController
     {
         private readonly IEntityBaseRepository<Genre> genreRepo;
+
         public GenresController(IEntityBaseRepository<Genre> genreRepo, IUnitOfWork unitOfWork,
             IEntityBaseRepository<Error> errorRepo) : base(errorRepo, unitOfWork)
         {
